@@ -12,6 +12,7 @@ html {
 	height: 100%;
 	font-family: "Century Gothic", Futura, Helvetica, Arial, sans-serif;
 	font-size: 180%;
+	filter: grayscale(100%);
 }
 body {
 	min-height: 100%;
