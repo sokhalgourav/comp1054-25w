@@ -8,21 +8,33 @@
 			background-color: black;
 		}
 		h1 {
-			font: 1200%/1.2 Impact, sans-serif;
+			font: 1200%/1.2 Impact, "Google Sans", sans-serif;
+			font-weight: bold;
 			text-align: center;
 			/* STEP 1: Apply the gradient that you generated on the previous page as the background for the <h1> element, or use the photo of a sunset in the img/ directory */
-
+			/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,dd1cc7+20,d1bb1b+76&1+0,0.4+51,1+100 */
+			background: linear-gradient(135deg,  hsla(212,67%,36%,1) 0%,hsla(307,78%,49%,0.76) 20%,hsla(7,57%,62%,0.4) 51%,hsla(53,77%,46%,0.71) 76%,hsla(53,77%,46%,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 			/* STEP 2: Set the text color to transparent (dangerous) */
-
+			color: transparent;
 			/* STEP 3: Set the background-clip (and -webkit-background-clip) property to text */
-
+			-webkit-background-clip: text;
+			background-clip: text;
 			/* STEP 4: Apply another non-standard visual effect -webkit-text-stroke-color (and width) */
 
 		}
 		/* "Florida gulf coast" By Mmacbeth - Own work, CC0, https://commons.wikimedia.org/w/index.php?curid=39319981 */
+		h2 {
+			color: white;
+			font: 1200%/1.2 Impact, "Google Sans", sans-serif;
+			font-weight: bold;
+			text-align: center;
+			-webkit-text-stroke: 25px red;
+			paint-order: stroke fill;
+		}
 	</style>
 </head>
 <body>
 	<h1>Text Clipping</h1>
+	<h2>Text Stroke</h2>
 </body>
 </html>
