@@ -1,5 +1,6 @@
-		/* STEP 7: Remove diagnostic coloured borders */
 		@charset "UTF-8";
+		/* STEP 7: Remove diagnostic coloured borders */
+		
 		/* Read the Web's best guide to CSS Flexbox at https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
 		body{
 			background: #333;
@@ -15,34 +16,37 @@
 			color: white;
 		}
 		nav {
-			border: 3px solid lightblue;
+			/* border: 3px solid lightblue; */
 		}
 		nav ul {
-			border: 3px solid deeppink;
+			/* border: 3px solid deeppink; */
 			/* STEP 2: Get rid of the list markers */
-			
+			list-style-type: none;
 			/* STEP 3: Set the UL to display: flex */
-			
+			display: flex;
 			/* STEP 4: Remove margin and padding on UL */
-			
+			padding: 0;
+			margin: 0;
 			/* STEP 5: Center content inside the UL with justify-content: center; */
-			
+			justify-content: center;
 			/* STEP 6: Experiment with distributing the children of the UL differently (flex-start | flex-end | center | space-between | space-around) – be sure to play with the width of the browser window to observe the behavior */
 			
 			/* Learn more about justify-content at https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-6 */
 		}
 		nav li {
-			border: 3px solid lawngreen;
+			/* border: 3px solid lawngreen; */
+			margin: 0 0.5em 0 0.5em;
 		}
 		nav li a {
 			/* border: 3px solid orange; */
 			/* Render anchor elements as boxes */
 			display: block;
-			padding: 0.5em;
+			padding: 0.8em;
 			background: #ccc;
 			/* Style the text for the links */
 			text-decoration: none;
 			color: #000;
+			border-radius: 0.4em 0.4em 0 0;
 		}
 		nav li a:hover {
 			background: #fff;
@@ -52,8 +56,8 @@
 		}
 		main {
 			background: #fff;
-		}
-		main {
 			padding: 1em;
 			line-height: 1.5;
+			border-radius: 0.4em;
+
 		}
