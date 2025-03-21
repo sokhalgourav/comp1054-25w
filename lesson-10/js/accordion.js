@@ -1,14 +1,19 @@
-// STEP 6: Nab all the SUMMARY elements
+// Select all <details> elements on the page
+document.querySelectorAll("details").forEach(detail => {
+	// Add a 'toggle' event listener to each <details> element
+	detail.addEventListener("toggle", event => {
+	  // Check if the currently toggled <details> element is open
+	  if (event.target.open) {
+		// If it's open, close all other <details> elements
+		document.querySelectorAll("details").forEach(otherDetail => {
+		  // Ensure we don't close the currently opened <details> element
+		  if (otherDetail !== event.target) {
+			// Remove the 'open' attribute to close the other <details> elements
+			otherDetail.removeAttribute("open");
+		  }
+		});
+	  }
+	});
+  });
 
-
-// STEP 7: Loop through the element array to add an event listener, and reference a function called closeOpenDetails
-
-
-// STEP 8a: Create the closeOpenDetails() function
-
-	// STEP 8b: Loop through the summaries array again
-
-		// STEp 8c: Check to make sure the DETAILS element is not the parent of the SUMMARY that was clicked 
-
-
-// STEP 9: Check in the browser to make sure there are no errors - use the console, then proceed to the CSS for the final step
+  // Thanks to Gemini 2.0 for the nice code refactoring.
