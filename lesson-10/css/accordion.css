@@ -22,6 +22,20 @@ details {
 	padding: 0 1rem;
 	background-color: whitesmoke;
 }
+
+/* Animate the opening and closing of the panel (https://stackoverflow.com/questions/17301282/transitioning-between-open-close-in-details-element) */
+details div {
+	transition: height 1s ease;
+	overflow: hidden;
+}
+details:not([open]) div {
+	height: 0;
+}
+details[open] div {
+	max-height: 3.75em;
+}
+/* The above doesn't work, but some ideas that may work are at https://codepen.io/morewry/pen/DLyqWY */
+
 /* STEP 3b: Adjacent sibling DETAILS elements don't need a top border */
 details + details {
 	border-top: none;
