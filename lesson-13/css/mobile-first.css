@@ -68,7 +68,7 @@ main {
 
 }
 header, section, footer {
-
+	padding: 1rem;
 }
 footer {
 	background-color: #ccc;
@@ -81,7 +81,7 @@ footer {
 	}
 	/* STEP 14: Size up hamburger icon a bit to match main heading */
 	#menu-icon {
-
+		font-size: 3rem;
 	}
 	main {
 		display: flex;
@@ -96,19 +96,22 @@ footer {
 @media only screen and (min-width: 1024px), (orientation: landscape) {
 	/* STEP 13a: Rearrange the navigation so that we don't use the hamburger */
 	#menu-icon {
-
+		display: none;
 	}
 	/* STEP 13b: Stack the H1 and the NAV in a column */
 	header {
-
+		flex-direction: column;
 	}
 	/* STEP 13c: Null out the hover behaviour on the HEADER NAV, and render the UL horizontally across the screen in full-width, distributing the links inside */
-	header nav ul, header nav:hover ul {
-
+	header nav ul,
+	header nav:hover ul {
+		position: static;
+		display: flex;
+		justify-content: space-evenly;
 	}
 	/* STEP 13d: Size up the HEADER NAV links */
 	header nav ul a {
-
+		font-size: 1.5rem;
 	}
 	/* STEP 4c: Use flexbox to create the 4-column layout */
 	main {
