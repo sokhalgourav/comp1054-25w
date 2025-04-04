@@ -1,0 +1,108 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* NHL Logo Background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(NHL-Symbol.png); 
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.2; /* Adjust transparency as needed */
+    z-index: -1;
+}
+
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: #0033a0;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Table Styling */
+table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Headers */
+th {
+    background-color: #0033a0;
+    color: white;
+    padding: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    position: sticky;
+    top: 0;
+}
+
+/* Table Cells */
+td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Alternate Row Colors */
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Hover Effect */
+tr:hover {
+    background-color: rgba(0, 51, 160, 0.15);
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Team Name Column */
+td:first-child {
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Points Column - Highlight */
+th:nth-child(6),
+td:nth-child(6) {
+    background-color: #e0efff;
+}
+
+/* Goal Difference Styling */
+td:nth-child(9) {
+    font-weight: bold;
+}
+
+/* Positive Goal Difference in Green */
+td:nth-child(9):not(:empty)::before {
+    content: attr(data-diff);
+}
+
+td:nth-child(9)[data-diff^="+"] {
+    color: green;
+}
+
+/* Negative Goal Difference in Red */
+td:nth-child(9)[data-diff^="-"] {
+    color: red;
+}
